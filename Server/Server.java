@@ -1,6 +1,4 @@
 /*Student Name: Heaten Mistry
- *Student Number: 211 869 476
- *CSE account: cse13131
  *Assignment: 2
  *Course: EECS 3214*/
 

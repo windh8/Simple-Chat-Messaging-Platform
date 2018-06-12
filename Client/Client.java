@@ -1,6 +1,4 @@
 /*Student Name: Heaten Mistry
- *Student Number: 211 869 476
- *CSE account: cse13131
  *Assignment: 2
  *Course: EECS 3214*/
 
@@ -22,16 +20,16 @@ public class Client
 	{
 		/*When run by user, user must specify Server IP address so a connection could be made.
 		 *If no argument is made when attempting to run program, error will occur*/
-		if(args.length != 1)
+		if(args.length != 2)
 		{
-			System.err.println("Error: Run Program with following: java Client <Server IP>");
+			System.err.println("Error: Run Program with following: java Client <Server IP> <Server PORT>");
 			System.exit(1);
 		}
 		
 		/*ServerIP variable will refer to the Serverès IP Address that the user specifies.
 		 *ServerPort variable is predefined to a specific port number that the Server will be listen at*/
 		String ServerIP = args[0];
-		int ServerPort = 33131;
+		int ServerPort = Integer.parseInt(args[1]);
 
 		try 
 		{
