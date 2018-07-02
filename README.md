@@ -10,7 +10,7 @@ It is composed of two applications: a Server application, and a Client applicati
   1. Download the contents of this Repository
   2. Once downloaded, go to the root directory of where the project files are located and run the following command in either cmd or shell
       ```sh
-      javac *
+          javac *
       ```
     
   3. Take the Server folder and place it on a device that you would like to run the Server application on
@@ -43,3 +43,4 @@ It is composed of two applications: a Server application, and a Client applicati
   
   
   ## <a name='HowItWorks'></a>How does it work?
+  Will be added soon.
