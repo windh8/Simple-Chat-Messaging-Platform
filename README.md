@@ -14,10 +14,10 @@ It is composed of two applications: a Server application, and a Client applicati
       ```
     
   3. Take the Server folder and place it on a device that you would like to run the Server application on
-    - Note: Java must be installed
+     (*Note: Java must be installed*)
     
   4. Take the Client folder and place it on the device(s) that you would like to run the Client application on 
-    - Note: Java must be installed
+     (*Note: Java must be installed*)
   
   5. Run the following command to start the Server
       ```sh 
@@ -41,6 +41,27 @@ It is composed of two applications: a Server application, and a Client applicati
   7. What next? Start using it to chat with other connected peers.
      Don't know how? Go to the section [How does it work?](#HowItWorks)
   
+## <a name='HowToUse'></a>How do i use it?
+Once you are connected to the Server, you are not yet in the ChatRoom.
+To join the ChatRoom, type in
+```sh JOIN```
+
+Once connected, you can use either of the following commands:
+  - **LIST** - List all connected peers 
+  - **CHAT** - Chat with a connected peer
+  - **LEAVE** - Leave the ChatRoom/Server
   
-  ## <a name='HowItWorks'></a>How does it work?
-  Will be added soon.
+  *Note: The CHAT command will ask you which peer you would like to chat to, and hence it would be best to list all connected peers before you use the CHAT command*
+  
+## <a name='HowItWorks'></a>How does it work?
+The Server application consists of two threads: 
+	 1. The Server Thread
+	 2. The ChatRoom Thread
+
+Both threads of the Server application serve different purposes; the Server thread handles incomming connection requests and the ChatRoom thread facilitates client requests. 
+
+Upon starting the Server application, both threads will be up and running. The Server thread will start handling incomming connection requests, and the ChatRoom thread will begin servicing the clients that are already in the shared thread-safe collection (upon start-up the collection will be empty, and hence the ChatRoom thread will not really be doing anything).
+
+When a client application connects, the Server thread takes the client information and stores it on the shared thread-safe collection. The information stored would correspond to the socket used to communicate with the client, as well as the streams needed to send and recieve information to/from the client.
+
+While the Server thread handles connection requests, the ChatRoom thread will be busy facilitating the requests of the connected clients. The requests submitted by the connected clients, will be one of the three commands specified above in [How do i use it?](#HowToUse).
