@@ -65,3 +65,7 @@ Upon starting the Server application, both threads will be up and running. The S
 When a client application connects, the Server thread takes the client information and stores it on the shared thread-safe collection. The information stored would correspond to the socket used to communicate with the client, as well as the streams needed to send and recieve information to/from the client.
 
 While the Server thread handles connection requests, the ChatRoom thread will be busy facilitating the requests of the connected clients. The requests submitted by the connected clients, will be one of the three commands specified above in [How do i use it?](#HowToUse).
+
+
+## <a name='Issues'></a>Current Issues?
+Any current issues are currently being looked at and debugged, if you find any please feel free to let me know
