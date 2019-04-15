@@ -43,8 +43,7 @@ It is composed of two applications: a Server application, and a Client applicati
   
 ## <a name='HowToUse'></a>How do i use it?
 Once you are connected to the Server, you are not yet in the ChatRoom.
-To join the ChatRoom, type in
-```sh JOIN```
+To join the ChatRoom, type in ```JOIN``` in the cmd-line/shell
 
 Once connected, you can use either of the following commands:
   - **LIST** - List all connected peers 
