@@ -47,16 +47,11 @@ public class Server
 			Thread chatroom = new Thread(new Room("ChatRoom"), "ChatRoom");
 			chatroom.start();
 			
-			
-
-
 			while(!(host.isClosed()))//Can replace boolean expression with just 'true' for same added effect
 			{
 				/*The ServerSocket will wait for any incomming connection requests. Upon recieving one,
 				 *the connection will then be referenced by a Socket Object.*/
 				Socket newClient = host.accept();
-
-				//System.out.println("DEBUGGING STATEMENT: Client Connected");
 
 				/*The Socket Object, as well as the Input Stream Object (BufferedReader) and the 
 				 *Output Stream Object, will then be used to create a ClientInfo Object. Upon its
